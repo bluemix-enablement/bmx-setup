@@ -1,4 +1,4 @@
-## Set up MAC OS X 
+## Set up MAC OS X
 This document provides the steps for installing the software required to begin the exercises on a Mac computer. The sequence is as follows:  
 1. Install Xcode  
 2. Install Homebrew  
@@ -16,20 +16,18 @@ This document provides the steps for installing the software required to begin t
 1.	In a browser search engine, type xcode and select [Xcode on the Mac App Store - iTunes – Apple]( https://itunes.apple.com/ca/app/xcode/id497799835?mt=12).  
 Note: This was the link title at the time of writing. You search *itunes* for the XCode download link.  
 2. Click the Link View in Mac App Store.
-3. Click the **Get** button. 
+3. Click the **Get** button.
 4. It changes to an Install App button. Click it again.  
 NOTE: The download is approximately 4.5GB. It may take a long time.
 5. Verify the installation. Open Xcode, select **File > New > Playground**, then create the playground and verify that you see the string “Hello, playground”.
 
 ### Step 2: Install Homebrew
-1. In the Terminal window, type  
-`ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”`
-2. You see a list of steps that will be executed. type **Return** to start the process.
-3. Verify the installation by typing  
+1. Got to `https://brew.sh/` to see find the current installation process.
+2. Verify the installation by typing  
 `brew help`  
 You should see a list of usage examples.
 
-### Step 3: Install Java JDK 1.8 
+### Step 3: Install Java JDK 1.8
 1. Open a browser to [https://www.oracle.com]( https://www.oracle.com).  
 2. In the list of menu options, hover over **Downloads** (if you cannot see it, reduce the zoom of the browser until it appears).  
 3. Under *Popular Downloads* to the left, click **Java for Developers**.  
@@ -47,7 +45,7 @@ You should see a list of usage options.
 `$ vi ~/.bash_profile`
 2. Add the following line to the bottom of the file:  
 `export JAVA_HOME=$(/usr/libexec/java_home)`
- 
+
 3. **Save** and **close** the file.  
 4. In the Terminal, type  
 `$ source ~/.bash_profile`
@@ -67,7 +65,7 @@ You should see information about the java version, the runtime environment, and 
 1. Type
 `curl http://www.google.com`
 2. Verify that the response is the HTML for the Google page.  
-**NOTE**: If the response is ‘The document has moved’, then curl was successfully installed, but the url is not correct. According to your geography, you need to change the extension. 
+**NOTE**: If the response is ‘The document has moved’, then curl was successfully installed, but the url is not correct. According to your geography, you need to change the extension.
 
 ### Step 7: Install node.js
 1.Type  
@@ -95,7 +93,7 @@ You are asked to accept the license, and to allow usage information to be collec
 4. A window opens with two icons. Drag the left *Docker.app* icon onto the right *Applications* icon.
 5. In the *Applications* directory, double-click Docker.app.
 6. Verify that the whale icon is added to the status bar at the top of the screen.
-7. Click the icon to verify that Docker is running. 
+7. Click the icon to verify that Docker is running.
 
 ### Step 10: Install cloudfoundry CLI
 You install cloudfoundry using a package manager.
@@ -116,5 +114,3 @@ The response shows the version number.
 NOTE: You may see the message *Authentication has expired.* If so, log back in with `cf login`.
 
 This completes the setup for the Mac environment.
-
-

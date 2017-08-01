@@ -2,7 +2,7 @@
 
 This document provides the steps to install the software required to begin the exercises on a Windows machine.  The instructions were written for a Windows 7 Professional machine.  Exceptions have been noted for Windows 8 and Windows 10. The sequence is as follows:
 
-1.	Install Java JDK 1.9
+1.	Install Java JDK 1.8
 2.	Edit the JAVA_HOME variable and edit the system PATH
 3.	Install GIT
 4.	Install cURL
@@ -13,17 +13,17 @@ This document provides the steps to install the software required to begin the e
 9.	Install the IBM Container plugin for cloudfoundry
 
 ## Part 1: Install Java JDK 1.8
- 
+
 1.	In a browser, open https://www.oracle.com
-2.	In the list of menu options, hover over Downloads. 
+2.	In the list of menu options, hover over Downloads.
 3.	Under Popular Downloads, click Java for Developers.
 4.	Click the download button for Java Platform (JDK) 8u111 (Note: your minor version may be different)
 5.	In the section entitled Java SE Development Kit 8u111, click Accept License Agreement.
 6.	Select the .exe file for Windows x64 (jdk-8u111-windows-x64.exe).  The file is downloaded to the machine’s Download directory.
 7.	 Run the Windows executable.  Navigate to the Download directory. Double click jdk-8u111-windows-x64.exe
 8.	At the Welcome screen, click Next.
-9.	Accept the features to install.  Accept the default install location C:\Program Files\Java\jdk1.8.0_111\.  Click Next. 
-10.	Upon successful installation, click Close. 
+9.	Accept the features to install.  Accept the default install location C:\Program Files\Java\jdk1.8.0_111\.  Click Next.
+10.	Upon successful installation, click Close.
 11.	Verify that the installation was successful.  Open a command prompt.  Change directories to C:\Program Files\Java\jdk1.8.0_111\. You should see 6 directories, 6 files, and 2 zip files.
 
 ## Part 2:  Edit the system PATH.  
@@ -33,7 +33,7 @@ Add JAVA_HOME to the Path by editing an environment variable.
 1.	Add or modify the JAVA_HOME environment variable to C:\Program Files\Java\jdk1.8.0_111
 2.	Add JAVA_HOME to the end of the Path system variable.
 3.	Close the Environment Variables window.
-4.	Restart the computer. 
+4.	Restart the computer.
 5.	Verify that your installation of Java is recognized. Open a command prompt and type:
 java –version
 6.	You should see information about the Java version, Java runtime, and Java HotSpot.
@@ -46,48 +46,48 @@ java –version
 5.	Accept the default components for installation.  Click Next.
 6.	Create a shortcut.  Click Next.
 7.	Adjust the PATH environment by selecting the option labeled Use Git from the Windows Command Prompt.  Click Next.
-8.	Configure the line ending conversions by selecting Checkout Windows-style, commit Unix-style line endings. Click Next. 
+8.	Configure the line ending conversions by selecting Checkout Windows-style, commit Unix-style line endings. Click Next.
 9.	Select Use MinTTY as the terminal emulator with Git Bash.  Click Next.
 10.	Keep the default extra options Enable file system caching and Enable Git Credential Manager.  Click Next.
 11.	Do not select any experimental options.  Click Install.
 12.	Click Finish.
-13.	Open a command prompt and change to C:\Program Files\Git\bin.  Type git –version
+13.	Open a command prompt and change to C:\Program Files\Git\bin.  Type git --version
 14.	You should see the response git version 2.11.windows.1
 
 ## Part 4:  Install cURL
 1.	Create a folder named:  C:\curl
 2.	Go to http://curl.haxx.se/download.html and download the following the zip file for the Win64 version of cURL:
-Scroll to the Win64-Generic section.  Locate the latest Win64 ia64 zip version with SSL support. Click the version number to start the download. 
+Scroll to the Win64-Generic section.  Locate the latest Win64 ia64 zip version with SSL support. Click the version number to start the download.
 3.	Save the zip file
 4.	Unzip the downloaded zip file.  Move curl.exe to C:\curl
-5.	Go to http://curl.haxx.se/docs/caextract.html  and download the digital certificate file named cacert.pem. 
-6.	Move cacert.pem to C:\curl.  Rename the file curl-ca-bundle.crt. 
-7.	Add C:\curl to the Windows PATH environment variable so the curl command is available from any location at the command prompt. 
-8.	Verify the installation is complete. Open a command prompt and enter curl https://www.google.com. The request returns the html in the command window. 
+5.	Go to http://curl.haxx.se/docs/caextract.html  and download the digital certificate file named cacert.pem.
+6.	Move cacert.pem to C:\curl.  Rename the file curl-ca-bundle.crt.
+7.	Add C:\curl to the Windows PATH environment variable so the curl command is available from any location at the command prompt.
+8.	Verify the installation is complete. Open a command prompt and enter curl https://www.google.com. The request returns the html in the command window.
 
 ## Part  5:  Install node.js
 1.	Go to https://nodejs.org/en/
 2.	There are two versions listed. Download the recommend version.
-3.	Start the Windows installer package for node-v6.9.2-x64.msi.  Click Run. 
+3.	Start the Windows installer package for node-v6.9.2-x64.msi.  Click Run.
 4.	At the Welcome window, click Next.
 5.	Accept the end-user license agreement. Click Next.
 6.	Accept the destination folder.  Click Next.
 7.	Accept any custom setup options. Click Next.
 8.	Click Install.
-9.	Click Finish when notified the installation was successful. 
+9.	Click Finish when notified the installation was successful.
 10.	Verify the installation.  At a command prompt, enter npm version
 11.	You should see a JSON object like the following:
- 
+
 
 ## Part  6:  Install API Connect
 
 Use npm to install API Connect.
-1.	Open a command prompt. Type npm install -g apiconnect.  This installation takes several minutes to complete.  You can ignore any warnings about deprecated packages. 
+1.	Open a command prompt. Type npm install -g apiconnect.  This installation takes several minutes to complete.  You can ignore any warnings about deprecated packages.
 
 ## Part  7:  Install Docker
 
-### For Windows 10 
-Install Docker for Windows.  Follow https://docs.docker.com/docker-for-windows   for specific directions. 
+### For Windows 10
+Install Docker for Windows.  Follow https://docs.docker.com/docker-for-windows   for specific directions.
 
 If you have 64 bit Windows 7 or higher, follow these directions to install Docker with Toolbox.
 
@@ -101,7 +101,7 @@ If you have 64 bit Windows 7 or higher, follow these directions to install Docke
 	You must run the Microsoft Hardware-Assisted Virtualization Detection Tool which can be found at `https://www.microsoft.com/en-us/download/details.aspx?id=592`
 
 	a.	Download the MHAVDT.  Be sure to select havdetectiontool.exe and the user guide.
-	b.	Run the detection tool by clicking havdetectiontool.exe 
+	b.	Run the detection tool by clicking havdetectiontool.exe
 	c.	Accept the license agreement.  Click Next.
 	d.	You should see a message This computer is configured with hardware-assisted virtualization.
 	e.	Select No, I don’t want to send data.  Click OK.
@@ -132,12 +132,12 @@ If you have 64 bit Windows 7 or higher, follow these directions to install Docke
 6.	Select Only for me as the installation option. Click Next.
 7.	Accept the default destination location.  Click Next.
 8.	Verify settings and click Install.
-9.	Click Finish. 
-10.	Verify installation.  Open a command prompt.  Enter cf -v   You should see the version number of the CLI. 
+9.	Click Finish.
+10.	Verify installation.  Open a command prompt.  Enter cf -v   You should see the version number of the CLI.
 ## Part  9:  Install the IBM Container plugin for cloudfoundry
 1.	Use cloudfoundry to install the container plugin
 cf install-plugin https://static-ice.ng.bluemix.net/ibm-containers-windows_x64.exe
 2.	Type y when asked to install the plugin.
 3.	Type y if warned about binaries.
-4.	You should receive a message that Plugin IBM-Containers v0.8.964 successfully installed. 
-This completes the setup of your computer. 
+4.	You should receive a message that Plugin IBM-Containers v0.8.964 successfully installed.
+This completes the setup of your computer.
