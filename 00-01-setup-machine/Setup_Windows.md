@@ -91,7 +91,7 @@ Install Docker for Windows.  Follow https://docs.docker.com/docker-for-windows  
 
 If you have 64 bit Windows 7 or higher, follow these directions to install Docker with Toolbox.
 
-1.	You must have virtualization enabled on your machine.  This is not an issue if you are running Windows 10.  However, if you are running Windows 7 or Windows 8, you must read and follow one set of these directions.
+1.	You must have virtualization enabled on your machine.  This might be an issue if you are running Windows 10.  However, if you are running Windows 7 or Windows 8, you must read and follow one set of these directions.
 
 	### Windows 8 or 8.1
 	Choose Start > Task Manager.  Navigate to the Performance tab.  Under CPU, you should see Virtualization: Enabled.
