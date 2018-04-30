@@ -15,22 +15,22 @@ This document provides the steps to install the software required to begin the e
 ## Part 1: Install Java JDK 1.8
 
 1.	In a browser, open https://www.oracle.com
-2.	In the list of menu options, hover over Downloads.
-3.	Under Popular Downloads, click Java for Developers.
-4.	Click the download button for Java Platform (JDK) 8u111 (Note: your minor version may be different)
-5.	In the section entitled Java SE Development Kit 8u111, click Accept License Agreement.
-6.	Select the .exe file for Windows x64 (jdk-8u111-windows-x64.exe).  The file is downloaded to the machine’s Download directory.
+2.	In the list of menu options, hover over __Downloads and Trials__.
+3.	Click __Developer Downloads__. Under the Java section, click __Java SE__.
+4.	Under the Java SE 8u144 section, click the __DOWNLOAD__ button under JDK (Note: your minor version may be different)
+5.	In the section entitled Java SE Development Kit 8u144, click __Accept License Agreement__.
+6.	Select the .exe file for Windows x64 (__jdk-8u144-windows-x64.exe__).  The file is downloaded to the machine’s Download directory.
 7.	 Run the Windows executable.  Navigate to the Download directory. Double click jdk-8u111-windows-x64.exe
 8.	At the Welcome screen, click Next.
-9.	Accept the features to install.  Accept the default install location C:\Program Files\Java\jdk1.8.0_111\.  Click Next.
+9.	Accept the features to install.  Accept the default install location C:\Program Files\Java\jdk1.8.0_144\.  Click Next.
 10.	Upon successful installation, click Close.
-11.	Verify that the installation was successful.  Open a command prompt.  Change directories to C:\Program Files\Java\jdk1.8.0_111\. You should see 6 directories, 6 files, and 2 zip files.
+11.	Verify that the installation was successful.  Open a command prompt.  Change directories to C:\Program Files\Java\jdk1.8.0_144\. You should see 6 directories, 6 files, and 2 zip files.
 
 ## Part 2:  Edit the system PATH.  
 
 Add JAVA_HOME to the Path by editing an environment variable.
 
-1.	Add or modify the JAVA_HOME environment variable to C:\Program Files\Java\jdk1.8.0_111
+1.	Add or modify the JAVA_HOME environment variable to C:\Program Files\Java\jdk1.8.0_144
 2.	Add JAVA_HOME to the end of the Path system variable.
 3.	Close the Environment Variables window.
 4.	Restart the computer.
@@ -38,7 +38,7 @@ Add JAVA_HOME to the Path by editing an environment variable.
 java –version
 6.	You should see information about the Java version, Java runtime, and Java HotSpot.
 
-## Part 3:  Install GIT
+## Part 3:  Install GIT (Your version number might be newer)
 1.	Download GIT for Windows from https://git-scm.com/download/win
 2.	Run the executable named Git-2.1.1.0-64-bit.exe
 3.	Read the GNU General Public License and click Next.
@@ -65,7 +65,7 @@ Scroll to the Win64-Generic section.  Locate the latest Win64 ia64 zip version w
 7.	Add C:\curl to the Windows PATH environment variable so the curl command is available from any location at the command prompt.
 8.	Verify the installation is complete. Open a command prompt and enter curl https://www.google.com. The request returns the html in the command window.
 
-## Part  5:  Install node.js
+## Part  5:  Install node.js (Your version number might be newer)
 1.	Go to https://nodejs.org/en/
 2.	There are two versions listed. Download the recommend version.
 3.	Start the Windows installer package for node-v6.9.2-x64.msi.  Click Run.
@@ -84,7 +84,7 @@ Scroll to the Win64-Generic section.  Locate the latest Win64 ia64 zip version w
 Use npm to install API Connect.
 1.	Open a command prompt. Type npm install -g apiconnect.  This installation takes several minutes to complete.  You can ignore any warnings about deprecated packages.
 
-## Part  7:  Install Docker
+## Part  7:  Install Docker (Your version number might be newer)
 
 ### For Windows 10
 Install Docker for Windows.  Follow https://docs.docker.com/docker-for-windows   for specific directions.
@@ -105,6 +105,7 @@ If you have 64 bit Windows 7 or higher, follow these directions to install Docke
 	c.	Accept the license agreement.  Click Next.
 	d.	You should see a message This computer is configured with hardware-assisted virtualization.
 	e.	Select No, I don’t want to send data.  Click OK.
+
 2.	Follow https://docs.docker.com/engine/installation/windows/  and scroll down to the Docker Toolbox section.
 3.	Click the link for Docker Toolbox  https://www.docker.com/products/docker-toolbox
 4.	Click Download (be sure to click the Windows option, not the Apple option)
@@ -123,21 +124,48 @@ If you have 64 bit Windows 7 or higher, follow these directions to install Docke
 	c.	There a number preliminary steps and downloads that must happen. Wait for a message indicating the interactive shell can start and the $ prompt is available.
 	d.	Type docker run hello-world.
 	e.	You should see a response starting Hello from Docker!
-## Part  8: Install cloudfoundry CLI
-1.	Open a browser to https://github.com/cloudfoundry/cli/releases
-2.	Click the link for Windows 64 bit
-3.	Select the option to save the installer file cf-cli-installer_6.22.2_winx64.zip.  Click OK.
-4.	Extract the installer zip file.
-5.	Click cf_installer.exe to begin the installation.
-6.	Select Only for me as the installation option. Click Next.
-7.	Accept the default destination location.  Click Next.
-8.	Verify settings and click Install.
-9.	Click Finish.
-10.	Verify installation.  Open a command prompt.  Enter cf -v   You should see the version number of the CLI.
-## Part  9:  Install the IBM Container plugin for cloudfoundry
-1.	Use cloudfoundry to install the container plugin
-cf install-plugin https://static-ice.ng.bluemix.net/ibm-containers-windows_x64.exe
-2.	Type y when asked to install the plugin.
-3.	Type y if warned about binaries.
-4.	You should receive a message that Plugin IBM-Containers v0.8.964 successfully installed.
-This completes the setup of your computer.
+## Part  8: Install the Bluemix CLI
+1.	Open a browser to https://console.bluemix.net/docs/cli/reference/bluemix_cli/all_versions.html#bluemix-cli-installer-downloads
+2.	Scroll to the right to see the Windows downloads, and click the link for the latest Windows 64 bit
+3.	Download and run the installer exe file.
+
+## Part  9: Install the IBM Container Service plugins for the Bluemix CLI
+1.	Open a browser to https://plugins.ng.bluemix.net/ui/repository.html
+2.	Download and install the win64 plugins for container-registry and container-service.
+
+## Part 10: Install the MYSQL Client
+1. Open a browser to https://dev.mysql.com/downloads/mysql/
+2. Download the ZIP Archive version of the latest Windows 64 bit MYSQL Installer. It shoud be approximately 320 MB.
+3. When the ZIP archive is downloaded, extract it to the directory of your choice.
+4. You will only need the mysql.exe executable. From the bin subdirectory under your extraction directory, move or copy the mysql.exe file to any directory in your PATH.
+
+## Part 11: Install WebSphere Liberty Profile
+
+1. Open a browser to https://developer.ibm.com/wasdev/downloads/download-latest-stable-websphere-liberty-runtime/
+2. Click the link to download the latest stable version of the Liberty Web Profile. It will be a ZIP archive file.
+3. Extract the ZIP archive wherever you want. You could extract it from the C:\ directory. It will create a directory whose name starts with wlp.
+
+## Part 12: Install Eclipse
+
+The labs are written to the Neon version of Eclipse. Since the behavior of Eclipse can vary with newer versions like Oxygen, we suggest that you install the Neon version, at least to use for the lab exercises.
+
+1. Open a browser to https://www.eclipse.org/downloads/packages/release/neon/3
+2. Click to download the Windows 64 bit version of Eclipse IDE for Java EE Developers. This will download a ZIP archive file.
+3. Extract the ZIP archive file wherever you wish. You could extract it from the C:\ directory. It will create a directory called eclipse. You might want to make a shortcut for the eclipse.exe file in your Windows Task Bar.
+
+## Part 13: Install Websphere Liberty and Bluemix developer tools for Eclipse
+
+1. Use the eclipse.exe executable to start Eclipse. Click to close the Welcoem panel.
+2. Open a browser to https://developer.ibm.com/wasdev/downloads/#asset/tools-WebSphere_Developer_Tools_for_Eclipse_Neon
+3. Drag and drop the __Install__ button for WebSphere Application Server Liberty onto the Eclipse Toolbar, then follow the prompts to install the WebSphere Liberty tools.  
+4. In Eclipse, under the Help menu, click __Eclipse Marketplace__. Search for __Bluemix__. Install the __IBM Eclipse Tools for Bluemix__.
+
+## Part 14: Install Cygwin
+
+There are certain times in the labs where the way that Windows interprets quote characters makes it easier for you to issue those commands from a Linux shell. You can have that Linux shell available by installing Cygwin.
+
+1. Open a browser to https://www.cygwin.com/
+2. Under the Current Cygwin DLL version heading, click to download the latest Windows 64 bit installation exe file.
+3. Run the installation exe file and follow the prompts to install Cygwin.
+
+## This completes the setup of your workstataion.
